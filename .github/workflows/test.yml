@@ -19,5 +19,7 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
+    - name: start request handler
+      run: python request_handler.py
     - name: Run tests
       run: pytest
