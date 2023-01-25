@@ -24,4 +24,4 @@ jobs:
     - name: Run tests
       run: pytest
     - name: stop server
-      run: cancel-job ${{ steps.startserver.id }}
+      run: deactivate
