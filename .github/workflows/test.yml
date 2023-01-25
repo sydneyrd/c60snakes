@@ -25,8 +25,8 @@ jobs:
       run: pytest
     - name: check and stop server
       run: |
-    if pgrep -f "python request_handler.py" > /dev/null
-    then
-      kill $(pgrep -f "python request_handler.py")
+      if pgrep -f "python request_handler.py" > /dev/null
+      then
+        kill $(pgrep -f "python request_handler.py")
     fi
 
