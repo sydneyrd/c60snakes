@@ -20,8 +20,13 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
     - name: startserver
-      run: python request_handler.py
-    - name: Run tests
+      run: python request_handler.py &
+    - name: run tests
       run: pytest
-    - name: stop server
-      run: deactivate
+    - name: check and stop server
+      run: |
+    if pgrep -f "python request_handler.py" > /dev/null
+    then
+      kill $(pgrep -f "python request_handler.py")
+    fi
+

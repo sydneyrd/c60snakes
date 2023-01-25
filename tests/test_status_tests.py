@@ -1,5 +1,4 @@
 import requests
-import pdb
 
 def test_unsupported_get():
     """
