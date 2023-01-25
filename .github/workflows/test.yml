@@ -23,5 +23,5 @@ jobs:
       run: python request_handler.py
     - name: Run tests
       run: pytest
-    - name: Stop request_handler
-        run: pkill -f "python request_handler.py"
+    - name: Run request_handler
+        run: python request_handler.py stop
