@@ -19,7 +19,7 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
-        apt-get update && apt-get install -y procps
+        pip install pgrep
     - name: startserver
       run: python request_handler.py &
     - name: run tests
